@@ -1,0 +1,264 @@
+body {
+    text-align: center !important;
+    background: black;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+.hoverl:hover {
+    color: #8b0e23 !important;
+}
+
+.hoverl {
+    color: white !important;
+    display: inline-block;
+    backface-visibility: hidden;
+    vertical-align: middle;
+    position: relative;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transform: translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hoverl:before {
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+    content: "";
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+    /* W3C */
+    transition-duration: 0.3s;
+    transition-property: transform, opacity;
+}
+
+.hoverl:hover, .hoverl:active, .hoverl:focus {
+    transform: translateY(-5px);
+}
+
+.hoverl:hover:before, .hoverl:active:before, .hoverl:focus:before {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+@keyframes bounce-animation {
+    16.65% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+
+    33.3% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+
+    49.95% {
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+    }
+
+    66.6% {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+    }
+
+    83.25% {
+        -webkit-transform: translateY(1px);
+        transform: translateY(1px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+.bounce {
+    animation-name: bounce-animation;
+    animation-duration: 2s;
+}
+
+/*everything below here is just setting up the page, so dont worry about it */
+@media (min-width: 768px) {
+    .navbar {
+
+        float: none;
+
+    }
+}
+
+#jahLogo {
+    float: left;
+    margin-left: 200px;
+    width: 4rem;
+    border-radius: 50%;
+}
+.lang{
+    
+    text-decoration: none;
+    float: right;
+    padding: 10px;
+    color: white;
+}
+.lang:hover{
+    color: #ae2012;
+}
+
+
+#button {
+    border: #343a40 solid;
+    margin-left: auto;
+    background-color: #6c757d;
+
+}
+
+#mainNavbar .navbar-brand {
+    color: black;
+    font-size: 1.3em;
+    font-weight: 800;
+}
+
+#navLinks {
+    width: 100%;
+    margin-left: 50px !important;
+}
+
+.navbar {
+    padding-top: 20px;
+    background: black;
+}
+
+#mainNavbar {
+    padding-top: 10px !important;
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+#bgabt {
+    transition: 2s;
+    box-shadow: 0.5px 0.5px 10px 1px #6c757d;
+    border: solid #9d0208;
+    background: #212529;
+}
+
+
+#mar {
+    color: #fef9ef !important;
+    margin-top: 5rem;
+}
+
+hr {
+    background-color: #9d0208;
+}
+
+.footer-dark {
+    margin-top: 200px;
+    border-top: solid #343a40;
+    border-right: solid #343a40;
+    border-left: solid #343a40;
+    padding: 30px 0;
+    color: white;
+    background-color: black;
+}
+
+.footer-dark h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.footer-dark ul {
+    padding: 0;
+    list-style: none;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.footer-dark ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+.footer-dark ul a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width:767px) {
+    .footer-dark .item:not(.social) {
+        text-align: center;
+
+    }
+}
+
+
+@media (max-width:767px) {
+    .footer-dark .item.text {
+        margin-bottom: 0;
+    }
+}
+
+.footer-dark .item.text p {
+    opacity: 0.6;
+    margin-bottom: 0;
+}
+
+.footer-dark .item.social {
+    text-align: center;
+}
+
+@media (max-width:991px) {
+    .footer-dark .item.social {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+.footer-dark .item.social>a {
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+    margin: 0 8px;
+    color: #fff;
+    opacity: 0.75;
+}
+
+.footer-dark .item.social>a:hover {
+    opacity: 0.9;
+}
+
+.facebook {
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+    margin: 0 8px;
+    color: #fff;
+    opacity: 0.75;
+}
+
+.footer-dark .copyright {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding-top: 24px;
+    opacity: 0.3;
+    font-size: 13px;
+    margin-bottom: 0;
+}
